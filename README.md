@@ -23,11 +23,11 @@ familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
 
 To initialize Dark Recovery local repository, use this command :
 ```bash
-    repo init -u git://github.com/DarkRecovery/dr_manifest.git -b dr
+    repo init --depth=1 -u git://github.com/MediaTek-Kernel/dr_manifest.git -b dr
 ```
 Then to sync up :
 ```bash
-    repo sync
+    repo sync -c -f -j8 --force-sync --no-clone-bundle
 ```
 
  Compilation Of Dark Recovery
